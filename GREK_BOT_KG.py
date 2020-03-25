@@ -1,27 +1,15 @@
-# создание вирт окружения с именем ' env'     python3 -m venv env
-# запуск виртюокружения  = =  source bot_test/bin/activate
-
-#pip install pytelegrambotapi
-# virtualenv -p python3 envname
-# Обновление после редактирования OP:
-
-# В OP версии virtualenv произошла ошибка, описанная здесь здесь. Проблема была устранена при запуске:
-
-# pip install --upgrade virtualenv
-
 
 import logging
 import csv
 import telebot
 from telebot import types
-import threading
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from telegram.ext.dispatcher import run_async  
 
 
-bot = telebot.TeleBot('1104869614:AAF3VYh-gA54sFkKq0wMeqzvk19BCpcy4LQ')
+
+bot = telebot.TeleBot('your API')
 
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
 keyboard1.row('Да', 'Нет')
@@ -46,9 +34,7 @@ keyboard5.row("Боль в горле")
 keyboard6 = telebot.types.ReplyKeyboardMarkup(True, True)
 keyboard6.row("Продолжить","Выйти")
 
-name = ''
-surname = ''
-age = 0
+
 User_name = {}
 email = ''
 res = ''
